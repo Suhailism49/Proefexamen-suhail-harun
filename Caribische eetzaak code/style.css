@@ -1,0 +1,494 @@
+/* Basis styling voor de hele pagina */
+* {
+  box-sizing: border-box;
+}
+
+/* Globale bodystijl */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4efe8;
+  color: #222;
+}
+
+/* Header en navigatie */
+header {
+  background-color: white;
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.logo span {
+  font-size: 36px;
+}
+
+.logo h2,
+.logo p {
+  margin: 0;
+}
+
+.logo p {
+  color: #777;
+  font-size: 14px;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+.account-links {
+  display: flex;
+  gap: 15px;
+}
+
+nav a,
+.account-links a,
+.formulier a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #222;
+  font-weight: 700;
+}
+
+nav a:hover,
+.account-links a:hover,
+.formulier a:hover {
+  color: #d94b22;
+}
+
+#cartAantal {
+  background-color: #d94b22;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+main {
+  width: 90%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.page {
+  display: none;
+  padding: 45px 0;
+}
+
+.active {
+  display: block;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 35px;
+  align-items: center;
+  min-height: 470px;
+}
+
+.small-title {
+  color: #d94b22;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero h1,
+.titel h1 {
+  font-size: 48px;
+  margin: 0 0 15px;
+}
+
+.hero p,
+.titel p {
+  line-height: 1.7;
+  color: #555;
+  font-size: 18px;
+}
+
+button {
+  border: 0;
+  background-color: #d94b22;
+  color: white;
+  padding: 13px 22px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b83b18;
+}
+
+.hero-box {
+  background: linear-gradient(135deg, #27211f, #d94b22);
+  color: white;
+  padding: 35px;
+  border-radius: 18px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-box h3 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.hero-box strong {
+  color: #ffe08a;
+  font-size: 25px;
+}
+
+.info-blokken {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.blok {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, .08);
+}
+
+.rood {
+  border-top: 6px solid #ff8a8a;
+}
+
+.groen {
+  border-top: 6px solid #6bdc8a;
+}
+
+.filter-balk {
+  display: flex;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+input,
+select,
+textarea {
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.filter-balk input {
+  flex: 1;
+}
+
+.producten-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 22px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, .08);
+  cursor: pointer;
+  transition: .2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-icoon {
+  font-size: 42px;
+}
+
+.prijs {
+  font-size: 22px;
+  color: #d94b22;
+  font-weight: 700;
+}
+
+.soort {
+  display: inline-block;
+  background-color: #eef8ef;
+  color: #267a34;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.terug {
+  background-color: #ff8a8a;
+  margin-bottom: 20px;
+}
+
+.detail-box {
+  background-color: white;
+  padding: 25px;
+  border-radius: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, .08);
+}
+
+.detail-emoji {
+  background-color: #fff1d6;
+  border-radius: 15px;
+  font-size: 120px;
+  display: grid;
+  place-items: center;
+  min-height: 260px;
+}
+
+.detail-info label {
+  display: block;
+  margin-top: 12px;
+}
+
+.detail-info input,
+.detail-info select {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.ingredienten {
+  grid-column: 1 / 3;
+  background-color: #f6f0e8;
+  padding: 18px;
+  border-radius: 12px;
+}
+table{width:100%;border-collapse:collapse;background:#fff;box-shadow:0 3px 15px rgba(0,0,0,.08);border-radius:12px;overflow:hidden}
+th,td{text-align:left;padding:15px;border-bottom:1px solid #eee}
+.kleine-knop{padding:8px 12px;margin-right:5px}
+
+.verwijder {
+  background-color: #e12b2b;
+}
+
+.totaal {
+  text-align: right;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 18px;
+}
+
+.rechts {
+  float: right;
+  margin-top: 20px;
+}
+
+.betaal-box {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 15px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.betaal-box textarea,
+.betaal-box button {
+  grid-column: 2;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+/* Over ons en formulieren */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.contact-card,
+.formulier {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.formulier {
+  max-width: 650px;
+  margin: 0 auto;
+  display: grid;
+  gap: 12px;
+}
+
+.groot-formulier {
+  max-width: 850px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.groot-formulier h1,
+.groot-formulier button,
+.groot-formulier p {
+  grid-column: 1 / 3;
+}
+
+footer {
+  margin-top: 40px;
+  background-color: white;
+  text-align: center;
+  padding: 22px;
+  color: #666;
+}
+
+@media (max-width: 850px) {
+  header,
+  nav,
+  .account-links,
+  .filter-balk {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero,
+  .info-blokken,
+  .detail-box,
+  .contact-grid,
+  .betaal-box,
+  .groot-formulier {
+    grid-template-columns: 1fr;
+  }
+
+  .producten-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ingredienten,
+  .groot-formulier h1,
+  .groot-formulier button,
+  .groot-formulier p,
+  .betaal-box textarea,
+  .betaal-box button {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 550px) {
+  .producten-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1,
+  .titel h1 {
+    font-size: 34px;
+  }
+}
+
+
+/* Adminpagina */
+.admin-overzicht {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.stat-card,
+.admin-bestelling {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.stat-card h3,
+.stat-card p {
+  margin: 0;
+}
+
+.stat-card p {
+  margin-top: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #d94b22;
+}
+
+.admin-bestelling {
+  margin-bottom: 25px;
+}
+
+.admin-kop {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.admin-kop h2,
+.admin-kop p {
+  margin: 0;
+}
+
+.status-label {
+  background-color: #eef8ef;
+  color: #267a34;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.admin-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 850px) {
+  .admin-overzicht,
+  .admin-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-kop {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* Admin login */
+.formulier form {
+  display: grid;
+  gap: 12px;
+}
+
+.foutmelding {
+  background: #ffe5e5;
+  color: #a80000;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.admin-tip {
+  background: #f6f0e8;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
